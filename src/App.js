@@ -11,6 +11,7 @@ class App extends React.Component {
     };
   }
 
+  const apiUrl = ""
   handleOnChange = (event) => {
     this.setState({
       input: event.target.value,
