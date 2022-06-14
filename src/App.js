@@ -16,6 +16,11 @@ class App extends React.Component {
       input: event.target.value,
     });
   };
+
+  handleSearch = (e) => {
+    e.preventDefault();
+  };
+
   render() {
     return (
       <div className="App">
