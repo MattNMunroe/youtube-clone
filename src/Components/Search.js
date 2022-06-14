@@ -9,15 +9,18 @@ const Search = (props) => {
   console.log(search);
   return (
     <div>
-      <form>
-        <input
-          className="searchfield"
-          onChange={handleOnChange}
-          type="text"
-          value={search}
-        />
-        <input className="button" type="submit" value="Search" />
-      </form>
+      <input
+        className="searchfield"
+        onChange={handleOnChange}
+        type="text"
+        value={search}
+      />
+      <input
+        onClick={() => {}}
+        className="button"
+        type="submit"
+        value="Search"
+      />
     </div>
   );
 };
