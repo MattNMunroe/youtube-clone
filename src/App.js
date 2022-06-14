@@ -10,9 +10,9 @@ class App extends React.Component {
     super();
     this.state = {
       input: "",
+      isPlaying: [],
     };
   }
-
   handleOnChange = (event) => {
     this.setState({
       input: event.target.value,
@@ -36,6 +36,7 @@ class App extends React.Component {
         <Search
           search={this.state.input}
           handleOnChange={this.handleOnChange}
+          handleSearch={this.handleSearch}
         />
       </div>
     );

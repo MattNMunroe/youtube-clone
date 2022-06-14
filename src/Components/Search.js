@@ -5,8 +5,8 @@ import "./Search.css";
 //Fixed: Deconstructed props w/ correct names for passed functions/state
 
 const Search = (props) => {
-  const { handleOnChange, search } = props;
-  console.log(search);
+  const { handleOnChange, search, handleSearch } = props;
+  // console.log(search);
   return (
     <div>
       <input
@@ -16,7 +16,9 @@ const Search = (props) => {
         value={search}
       />
       <input
-        onClick={() => {}}
+        onClick={() => {
+          handleSearch();
+        }}
         className="button"
         type="submit"
         value="Search"
