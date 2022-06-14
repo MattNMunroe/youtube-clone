@@ -5,23 +5,17 @@ import "./NavBar.css"
 export const Nav = () => {
   return (
     <header>
-      <article>
         <h1>
           <Link to="/">
             Youtube
           </Link>
         </h1>
-      </article>
-      <aside>
-        <ul>
-          <li>
+          <h2>
             <Link to="/home">Home</Link>
-          </li>
-          <li>
+          </h2>
+          <h2>
             <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </aside>
+          </h2>
     </header>
   );
 };
