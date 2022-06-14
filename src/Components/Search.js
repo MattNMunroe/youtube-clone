@@ -1,17 +1,20 @@
 import React from "react";
 import "./Search.css";
 
-//FUNCTIONAL OR CLASS COMPONENT? WHere are we handing STATE?
+//TODO: SUBMIT HANDLER
+//Fixed: Deconstructed props w/ correct names for passed functions/state
 
 const Search = (props) => {
+  const { handleOnChange, search } = props;
+  console.log(search);
   return (
     <div>
       <form>
         <input
           className="searchfield"
-          handleOnChange = {this.handleOnChange}
+          onChange={handleOnChange}
           type="text"
-          value = {this.state.input}
+          value={search}
         />
         <input className="button" type="submit" value="Search" />
       </form>
