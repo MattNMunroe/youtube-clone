@@ -23,7 +23,7 @@ class App extends React.Component {
     )
       .then((res) => res.json())
       .then((data) => console.log(data));
-    this.setState({ isPlaying: "RETURN OF OUR FETCH CALL" });
+    this.setState({ isPlaying: "RETURN OF FETCH CALL" });
   };
 
   render() {
