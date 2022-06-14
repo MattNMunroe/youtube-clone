@@ -1,0 +1,18 @@
+input {
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0.5em;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.searchfield {
+    width: 400px;
+}
+.button {
+    background-color: #c4302b;
+    color: white;
+    width: 125px;
+    font-weight: bold;
+}
+
