@@ -11,13 +11,23 @@ class App extends React.Component {
         input: ''
       }
     }
+  
+handleOnChange = (event) => {
+this.setState({
+  input: event.target.value 
+})
+
+
+}
   render () {
   return (
     <div className="App">
-     <Routes>
-      <Route path="/" element={<NavBar/>}/>
+      <Router>
+      <Routes>
+        <Route path="/" element={<NavBar/>}/>
      </Routes>
-      <Search />
+      <Search search={this.state.input} handleOnChange={this.handleOnChange}/>
+      </Router>
     </div>
   );
   }

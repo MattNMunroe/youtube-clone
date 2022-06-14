@@ -9,9 +9,9 @@ const Search = (props) => {
       <form>
         <input
           className="searchfield"
-          // onChange={Function Here}
+          handleOnChange = {this.handleOnChange}
           type="text"
-          // value={this.state.BLANK}
+          value = {this.state.input}
         />
         <input className="button" type="submit" value="Search" />
       </form>
