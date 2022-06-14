@@ -1,9 +1,17 @@
 
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import NavBar from './Components/NavBar'
 import Search from "./Components/Search";
 
-function App() {
+class App extends React.Component {
+  constructor(){
+    super()
+      this.state = {
+        input: ''
+      }
+    }
+  render () {
   return (
     <div className="App">
      <Routes>
@@ -12,6 +20,7 @@ function App() {
       <Search />
     </div>
   );
+  }
 }
 
 export default App;
