@@ -1,7 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Search from "./Components/Search";
+import VideoCards from "./Components/VideoCards"
+import VideoPlayer from "./Components/VideoPlayer"
+
 
 class App extends React.Component {
   constructor() {
@@ -11,32 +14,27 @@ class App extends React.Component {
       isPlaying: [],
     };
   }
-  handleOnChange = (event) => {
-    this.setState({
-      input: event.target.value,
-    });
-  };
 
-  handleSearch = () => {
+  handleSearch = (search) => {
     fetch(
-      `https://www.googleapis.com/youtube/v3/search?q=${this.state.input}&key=AIzaSyDJj8w5jL8QAg_FDqsDZoUWg8YfqbzZpRk`
+      `https://youtube.googleapis.com/youtube/v3/search?maxResults=20&q=${search}&key=AIzaSyDJj8w5jL8QAg_FDqsDZoUWg8YfqbzZpRk&part=snippet`
     )
       .then((res) => res.json())
-      .then((data) => console.log(data));
-    this.setState({ isPlaying: "RETURN OF FETCH CALL" });
+      .then((data) => this.setState({ isPlaying: data.items}));
   };
 
   render() {
+    console.log(this.state.isPlaying)
     return (
       <div className="App">
-        <Routes>
-          <Route path="/" element={<NavBar />} />
-        </Routes>
+        <NavBar />
         <Search
-          search={this.state.input}
-          handleOnChange={this.handleOnChange}
           handleSearch={this.handleSearch}
         />
+        <Routes>
+          <Route path='/videos/:id' element={<VideoPlayer/>}/>
+       <Route path='/' element={<VideoCards thisIsPlaying={this.state.isPlaying}/>}/>
+        </Routes>
       </div>
     );
   }

@@ -3,6 +3,10 @@ header {
   color: white;
   display: flex;
   justify-content: space-between;
-  align-items: start;
+}
+
+a{
+  color: #FFFFFF;
+  text-decoration: none;
 }
   
