@@ -1,11 +1,13 @@
 import React from "react";
 import "./Search.css";
 
-const Search = (props) => {
-  const { handleOnChange, search, handleSearch } = props;
-  // console.log(search);
-  return (
-    <div className="search">
+class Search extends React.Component {
+  
+  render() {
+    const { handleOnChange, search, handleSearch } = this.props
+
+    return(
+      <div className="search">
       <input
         className="searchfield"
         onChange={handleOnChange}
@@ -21,7 +23,8 @@ const Search = (props) => {
         value="Search"
       />
     </div>
-  );
-};
+    )
+  }
+}
 
 export default Search;
