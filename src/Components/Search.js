@@ -1,14 +1,11 @@
 import React from "react";
 import "./Search.css";
 
-//TODO: SUBMIT HANDLER
-//Fixed: Deconstructed props w/ correct names for passed functions/state
-
 const Search = (props) => {
   const { handleOnChange, search, handleSearch } = props;
   // console.log(search);
   return (
-    <div>
+    <div className="search">
       <input
         className="searchfield"
         onChange={handleOnChange}

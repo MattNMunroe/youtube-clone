@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Search from "./Components/Search";
 
@@ -19,7 +19,7 @@ class App extends React.Component {
 
   handleSearch = () => {
     fetch(
-      `https://www.googleapis.com/youtube/v3/search?q=${this.state.input}&key=AIzaSyDJj8w5jL8QAg_FDqsDZoUWg8YfqbzZpRk`
+      `https://youtube.googleapis.com/youtube/v3/search?maxResults=20&q=${this.state.search}&key=AIzaSyDJj8w5jL8QAg_FDqsDZoUWg8YfqbzZpRk&part=snippet`
     )
       .then((res) => res.json())
       .then((data) => console.log(data));
