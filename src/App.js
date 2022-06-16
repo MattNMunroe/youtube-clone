@@ -4,6 +4,8 @@ import NavBar from "./Components/NavBar";
 import Search from "./Components/Search";
 import VideoCards from "./Components/VideoCards";
 import VideoPlayer from "./Components/VideoPlayer";
+import About from './About'
+
 
 class App extends React.Component {
   constructor() {
@@ -37,6 +39,7 @@ class App extends React.Component {
               </>
             }
           />
+          <Route path="/about" element={<About/>}/>
           <Route path="/videos/:id" element={<VideoPlayer />} />
         </Routes>
       </div>
