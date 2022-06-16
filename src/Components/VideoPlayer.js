@@ -1,13 +1,3 @@
-//singular video
-//comments
-//state for video "isPlaying"
-//height/width etc
-//fullscreen = boolean?
-//submit form 
-//displays new and previous comment(s)
-//deleting comments
-
-
 import React from 'react'
 import YouTube from 'react-youtube'
 import { useParams } from 'react-router-dom'
