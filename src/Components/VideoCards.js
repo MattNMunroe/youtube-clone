@@ -12,9 +12,13 @@ const VideoCards = (props) => {
       </Link>
     );
   });
-  return <div>
-        {props.thisIsPlaying.length ? <div className="container">{sortedVideos}</div> : 'No Search Results yet! Please submit a search above!'}
-      </div>
-};
-
+  return (
+    <div>
+      {props.thisIsPlaying.length ? (
+        <div className="container">{sortedVideos}</div>
+      ) : (
+        "No Search Results yet! Please submit a search above!"
+      )}
+    </div>
+  );
 export default VideoCards;
