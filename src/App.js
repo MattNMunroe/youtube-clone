@@ -8,18 +8,22 @@ class App extends React.Component {
     super();
     this.state = {
       input: "",
+      isPlaying: [],
     };
   }
-
-  const apiUrl = ""
   handleOnChange = (event) => {
     this.setState({
       input: event.target.value,
     });
   };
 
-  handleSearch = (e) => {
-    e.preventDefault();
+  handleSearch = () => {
+    fetch(
+      `https://www.googleapis.com/youtube/v3/search?q=${this.state.input}&key=AIzaSyDJj8w5jL8QAg_FDqsDZoUWg8YfqbzZpRk`
+    )
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+    this.setState({ isPlaying: "RETURN OF FETCH CALL" });
   };
 
   render() {
@@ -31,6 +35,7 @@ class App extends React.Component {
         <Search
           search={this.state.input}
           handleOnChange={this.handleOnChange}
+          handleSearch={this.handleSearch}
         />
       </div>
     );
