@@ -21,6 +21,4 @@ const VideoCards = (props) => {
       )}
     </div>
   );
-};
-
 export default VideoCards;
