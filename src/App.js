@@ -4,24 +4,25 @@ import NavBar from "./Components/NavBar";
 import Search from "./Components/Search";
 import VideoCards from "./Components/VideoCards";
 import VideoPlayer from "./Components/VideoPlayer";
-import About from './About'
-
+import About from "./About";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      input: "",
       isPlaying: [],
     };
   }
 
   handleSearch = (search) => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?maxResults=20&q=${search}&key=AIzaSyDJj8w5jL8QAg_FDqsDZoUWg8YfqbzZpRk&part=snippet`
+      `https://youtube.googleapis.com/youtube/v3/search?maxResults=20&type=video&q=${search}&key=${process.env.REACT_APP_API_KEY}&part=snippet`
     )
       .then((res) => res.json())
-      .then((data) => this.setState({ isPlaying: data.items }));
+      .then((data) => this.setState({ isPlaying: data.items }))
+      .catch((e) => {
+        console.log(e);
+      });
   };
 
   render() {
@@ -39,7 +40,7 @@ class App extends React.Component {
               </>
             }
           />
-          <Route path="/about" element={<About/>}/>
+          <Route path="/about" element={<About />} />
           <Route path="/videos/:id" element={<VideoPlayer />} />
         </Routes>
       </div>
