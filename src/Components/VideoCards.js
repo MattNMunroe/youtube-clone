@@ -20,5 +20,5 @@ const VideoCards = (props) => {
         "No Search Results yet! Please submit a search above!"
       )}
     </div>
-  );
+  )};
 export default VideoCards;
