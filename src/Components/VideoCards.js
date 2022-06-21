@@ -6,8 +6,8 @@ const VideoCards = (props) => {
     return (
       <Link to={`/videos/${video.id.videoId}`} key={index}>
         <div className="videocard">
-          <img src={video.snippet.thumbnails.high.url} alt="" />
-          <h1>{video.snippet.title}</h1>
+          <img className="image" src={video.snippet.thumbnails.high.url} alt="" />
+          <div className="title">{video.snippet.title}</div>
         </div>
       </Link>
     );
