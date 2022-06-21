@@ -55,10 +55,10 @@ const VideoPlayer = () => {
       <div className="comment-box">
         {commentArray.map((completeComment, index) => {
           return (
-            <div key={index} className="comment">
-              <p>{completeComment[videoId].name}</p>
-              <p>{completeComment[videoId].comment}'</p>
-            </div>
+            <blockquote key={index}>
+              {completeComment[videoId].comment}
+              <span>-{completeComment[videoId].name}</span>
+            </blockquote>
           );
         })}
       </div>

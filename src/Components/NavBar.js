@@ -5,15 +5,19 @@ import "./NavBar.css";
 export const Nav = () => {
   return (
     <header>
-      <h1>
-        <Link to="/">YouTube</Link>
-      </h1>
-      <h2>
-        <Link to="/">Home</Link>
-      </h2>
-      <h2>
-        <Link to="/about">About</Link>
-      </h2>
+      <div className="nav">
+        <img
+          className="logo-img"
+          src="https://c.tenor.com/u8X39eJp7xcAAAAC/youtube-dance.gif"
+          alt=""
+        />
+        <Link to="/">
+          <div className="nav-element">Home</div>
+        </Link>
+        <Link to="/about">
+          <div className="nav-element">About</div>
+        </Link>
+      </div>
     </header>
   );
 };

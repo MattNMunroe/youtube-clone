@@ -1,21 +1,22 @@
 .video-wrapper { 
   text-align: center;
+
 }
 .video {
-  padding: 30px;
-
+  padding: 25px;
 }
 .comment-button {
     background-color: crimson;
     border: none;
     color: white;
+    margin: 20px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     border-radius: 5px;
     box-shadow: 0px 10px 15px rgba(213, 69, 29, 0.4);
-  }
+}
 
 
 .video-wrapper input[type=text] {
@@ -28,18 +29,48 @@
 
 .video-wrapper input[type=text]:focus {
   outline: none;
-  }
+}
 
-  .comment-button:hover {
+.comment-button:hover {
     background-color: white;
     box-shadow: 0px 15px 20px rgba(213, 69, 29, 0.4);
     color: crimson;
-  }
+}
 
-.comment-box {
-  max-width: 640px;
-	margin: auto;
-	background: #fff;
-	border-radius: 8px;
-	padding: 20px;
+
+
+blockquote{
+  font-size: 1.2em;
+  width:40%;
+  margin:25px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid crimson ;
+  line-height:1.0;
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:crimson;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:black;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
 }
