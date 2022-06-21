@@ -3,6 +3,11 @@ header {
   color: white;
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  
+}
+
+a{
+  color: blue;
+  text-decoration: none;
 }
   

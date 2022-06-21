@@ -6,7 +6,7 @@ export const Nav = () => {
   return (
     <header>
       <h1>
-        <Link to="/">Youtube</Link>
+        <Link to="/">YouTube</Link>
       </h1>
       <h2>
         <Link to="/">Home</Link>

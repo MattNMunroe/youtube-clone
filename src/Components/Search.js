@@ -1,30 +1,42 @@
 import React from "react";
 import "./Search.css";
 
-//TODO: SUBMIT HANDLER
-//Fixed: Deconstructed props w/ correct names for passed functions/state
+class Search extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      input: ""
+    }
+  }
+  
+  handleOnChange = (event) => {
+    this.setState({
+      input: event.target.value,
+    });
+  };
 
-const Search = (props) => {
-  const { handleOnChange, search, handleSearch } = props;
-  // console.log(search);
-  return (
-    <div>
+  render() {
+    const { handleSearch } = this.props
+
+    return(
+      <div className="search">
       <input
         className="searchfield"
-        onChange={handleOnChange}
+        onChange={this.handleOnChange}
         type="text"
-        value={search}
+        value={this.state.input}
       />
       <input
         onClick={() => {
-          handleSearch();
+          handleSearch(this.state.input);
         }}
         className="button"
         type="submit"
         value="Search"
       />
     </div>
-  );
-};
+    )
+  }
+}
 
 export default Search;

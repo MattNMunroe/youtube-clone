@@ -1,3 +1,7 @@
+.search {
+    line-height: 100px;
+    text-align: center;
+}
 input {
     border-radius: 5px;
     display: inline-block;
