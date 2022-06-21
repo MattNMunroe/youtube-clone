@@ -5,7 +5,7 @@ import Search from "./Components/Search";
 import VideoCards from "./Components/VideoCards";
 import VideoPlayer from "./Components/VideoPlayer";
 import About from "./About";
-import ModalNotFound from "./ModalNotFound";
+import ModalNotFound from "./Components/ModalNotFound";
 import SearchHistory from "./Components/SearchHistory";
 
 class App extends React.Component {
