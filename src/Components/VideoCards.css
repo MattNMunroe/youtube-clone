@@ -1,3 +1,32 @@
 h1 {
     color: black;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.title {
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a:hover {
+    color:gold;
+    text-decoration: underline;
+}
+
+.videocard {
+    display: flex;
+    grid-template-rows: 250px;
+    padding: 12px;
+    margin: 2px;
+    
+}
+
+img {
+    margin: 10px;
+    height: 250px;
+}
