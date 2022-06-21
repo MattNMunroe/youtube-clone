@@ -35,12 +35,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        <SearchHistory searchHistory={this.state.searchHistory}/>
         <Routes>
           <Route
             path="/"
             element={
               <>
+              <SearchHistory searchHistory={this.state.searchHistory}/>
                 <Search handleSearch={this.handleSearch} />
                 <VideoCards thisIsPlaying={this.state.isPlaying} />
               </>
@@ -48,6 +48,7 @@ class App extends React.Component {
           />
           <Route path="/about" element={<About />} />
           <Route path="/videos/:id" element={<VideoPlayer />} />
+          <Route path="*" element={<ModalNotFound onClick={() => {}} />} />
         </Routes>
       </div>
     );
