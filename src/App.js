@@ -5,7 +5,6 @@ import Search from "./Components/Search";
 import VideoCards from "./Components/VideoCards";
 import VideoPlayer from "./Components/VideoPlayer";
 import About from "./About";
-import ModalNotFound from "./ModalNotFound";
 
 class App extends React.Component {
   constructor() {
@@ -43,7 +42,6 @@ class App extends React.Component {
           />
           <Route path="/about" element={<About />} />
           <Route path="/videos/:id" element={<VideoPlayer />} />
-          <Route path="*" element={<ModalNotFound />} />
         </Routes>
       </div>
     );
