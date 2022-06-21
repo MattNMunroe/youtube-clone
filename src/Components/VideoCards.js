@@ -6,7 +6,12 @@ const VideoCards = (props) => {
     return (
       <Link to={`/videos/${video.id.videoId}`} key={index}>
         <div className="videocard">
-          <img className="image" src={video.snippet.thumbnails.high.url} alt="" />
+          <img
+            className="image"
+            src={video.snippet.thumbnails.high.url}
+            alt=""
+          />
+          <br />
           <div className="title">{video.snippet.title}</div>
         </div>
       </Link>
@@ -20,5 +25,6 @@ const VideoCards = (props) => {
         "No Search Results yet! Please submit a search above!"
       )}
     </div>
-  )};
+  );
+};
 export default VideoCards;
