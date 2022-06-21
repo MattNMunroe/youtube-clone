@@ -1,26 +1,45 @@
-h1 {
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    font-weight: 300;
+.video-wrapper { 
+  text-align: center;
 }
+.video {
+  padding: 30px;
 
-button {
+}
+.comment-button {
     background-color: crimson;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-  }
-
-  div, .youtube {
-    margin: 2px;
-    padding-bottom: 75px;
-    padding-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgba(213, 69, 29, 0.4);
   }
 
 
-  
+.video-wrapper input[type=text] {
+  width: 50%;
+  padding: 15px 20px;
+  margin: 9px 0px;
+  border: none;
+  border-bottom: 2px solid crimson;
+}
+
+.video-wrapper input[type=text]:focus {
+  outline: none;
+  }
+
+  .comment-button:hover {
+    background-color: white;
+    box-shadow: 0px 15px 20px rgba(213, 69, 29, 0.4);
+    color: crimson;
+  }
+
+.comment-box {
+  max-width: 640px;
+	margin: auto;
+	background: #fff;
+	border-radius: 8px;
+	padding: 20px;
+}
