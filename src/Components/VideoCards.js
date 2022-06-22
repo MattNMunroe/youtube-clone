@@ -18,11 +18,15 @@ const VideoCards = (props) => {
     );
   });
   return (
-    <div>
+    <div className="gallery">
       {props.thisIsPlaying.length ? (
         <div className="container">{sortedVideos}</div>
       ) : (
-        "No Search Results yet! Please submit a search above!"
+        <div className="wrapper-results">
+          <span className="no-results">
+            No search results yet! Please submit a search above.
+          </span>
+        </div>
       )}
     </div>
   );

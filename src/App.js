@@ -13,16 +13,21 @@ class App extends React.Component {
     super();
     this.state = {
       isPlaying: [],
-      searchHistory: []
+      searchHistory: [],
     };
   }
 
   handleSearch = (search) => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?maxResults=20&type=video&q=${search}&key=${process.env.REACT_APP_API_KEY}&part=snippet`
+      `https://youtube.googleapis.com/youtube/v3/search?maxResults=10&type=video&q=${search}&key=${process.env.REACT_APP_API_KEY}&part=snippet`
     )
       .then((res) => res.json())
-      .then((data) => this.setState({ isPlaying: data.items, searchHistory: [...this.state.searchHistory, search] }))
+      .then((data) =>
+        this.setState({
+          isPlaying: data.items,
+          searchHistory: [...this.state.searchHistory, search],
+        })
+      )
       .catch((e) => {
         console.log(e);
       });
@@ -30,8 +35,8 @@ class App extends React.Component {
 
   render() {
     console.log(this.state.isPlaying);
-    console.log(this.state.searchHistory)
-    
+    console.log(this.state.searchHistory);
+
     return (
       <div className="App">
         <NavBar />
@@ -40,7 +45,7 @@ class App extends React.Component {
             path="/"
             element={
               <>
-              <SearchHistory searchHistory={this.state.searchHistory}/>
+                {/* <SearchHistory searchHistory={this.state.searchHistory} /> */}
                 <Search handleSearch={this.handleSearch} />
                 <VideoCards thisIsPlaying={this.state.isPlaying} />
               </>
