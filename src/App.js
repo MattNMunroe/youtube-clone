@@ -6,7 +6,7 @@ import VideoCards from "./Components/VideoCards";
 import VideoPlayer from "./Components/VideoPlayer";
 import About from "./About";
 import ModalNotFound from "./Components/ModalNotFound";
-// import SearchHistory from "./Components/SearchHistory";
+import SearchHistory from "./Components/SearchHistory";
 
 class App extends React.Component {
   constructor() {
@@ -34,9 +34,6 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(this.state.isPlaying);
-    console.log(this.state.searchHistory);
-
     return (
       <div className="App">
         <NavBar />
@@ -45,9 +42,12 @@ class App extends React.Component {
             path="/"
             element={
               <>
-                {/* <SearchHistory searchHistory={this.state.searchHistory} /> */}
                 <Search handleSearch={this.handleSearch} />
                 <VideoCards thisIsPlaying={this.state.isPlaying} />
+                <SearchHistory
+                  searchHistory={this.state.searchHistory}
+                  handleSearch={this.handleSearch}
+                />
               </>
             }
           />

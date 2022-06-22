@@ -2,17 +2,21 @@ import React from "react";
 import { useState } from "react";
 
 const SearchHistory = (props) => {
-  const [isShowing, setShowing] = useState(false);
+  const [isShowing, setShowing] = useState(true);
 
   return (
     <div className="sidebar">
-      {isShowing &&
-        props.searchHistory.map((history) => {
-          return <div>{history}</div>;
-        })}
       <button onClick={() => setShowing(!isShowing)}>
-        {isShowing ? "Close History" : "Show History"}
+        {isShowing ? "Hide History" : "Show History"}
       </button>
+      {isShowing &&
+        props.searchHistory.map((history, idx) => {
+          return (
+            <div key={idx} onClick={() => props.handleSearch(history)}>
+              {history}
+            </div>
+          );
+        })}
     </div>
   );
 };
