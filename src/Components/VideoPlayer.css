@@ -34,7 +34,7 @@
 .comment-button:hover {
     background-color: white;
     box-shadow: 0px 15px 20px rgba(213, 69, 29, 0.4);
-    color: ##b2071d;
+    color: #b2071d;
 }
 
 
@@ -47,7 +47,7 @@ blockquote{
   font-style:italic;
   color: #555555;
   padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid #b2071d ;
+  border-left:8px solid #b2071d#b2071d#b2071d ;
   line-height:1.0;
   position: relative;
   background:#EDEDED;

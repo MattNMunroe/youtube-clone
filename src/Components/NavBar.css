@@ -2,7 +2,7 @@
 .logo-img {
 
   height: 125px;
-  margin-left: 200px;
+  margin-left: 150px;
   object-fit: cover;
 }
 
@@ -24,7 +24,9 @@
   letter-spacing: 2px;
 
 }
-
+.nav-element:hover {
+  text-decoration:underline;
+}
 .nav a{
   text-decoration: none;
   padding: 20px 5px;
