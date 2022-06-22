@@ -45,9 +45,9 @@ class App extends React.Component {
             path="/"
             element={
               <>
-                {/* <SearchHistory searchHistory={this.state.searchHistory} /> */}
                 <Search handleSearch={this.handleSearch} />
                 <VideoCards thisIsPlaying={this.state.isPlaying} />
+                <SearchHistory searchHistory={this.state.searchHistory} />
               </>
             }
           />

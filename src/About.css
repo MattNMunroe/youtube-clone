@@ -1,3 +1,54 @@
+
+.mission {
+width: 60%;
+ margin: auto;
+text-align: center;
+padding: 50px;
+font-family: arial;
+}
+
+.about-container {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+ }
+  
+.profile {
+font-family: arial;
+ max-width: 300px;
+ margin: 0 auto;
+ background-color: rgb(237, 230, 230);
+ padding: 30px;
+ border-radius: 10px;
+ position: relative;
+}
+
+.name {
+color: black;
+}
+
+.pic {
+    width: 75px;
+    height: 75px;
+    background: red;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transform-origin: bottom left;
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+.pic:hover {
+      transform: scale(1.5);
+      border-radius: 10px;
+}
 .blink {
     animation: blink 3 steps(1, end);
 
