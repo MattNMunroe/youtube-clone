@@ -6,7 +6,7 @@
   padding: 25px;
 }
 .comment-button {
-    background-color: crimson;
+    background-color:#b2071d;
     border: none;
     color: white;
     margin: 20px;
@@ -24,7 +24,7 @@
   padding: 15px 20px;
   margin: 9px 0px;
   border: none;
-  border-bottom: 2px solid crimson;
+  border-bottom: 2px solid#b2071d;
 }
 
 .video-wrapper input[type=text]:focus {
@@ -34,7 +34,7 @@
 .comment-button:hover {
     background-color: white;
     box-shadow: 0px 15px 20px rgba(213, 69, 29, 0.4);
-    color: crimson;
+    color: ##b2071d;
 }
 
 
@@ -47,7 +47,7 @@ blockquote{
   font-style:italic;
   color: #555555;
   padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid crimson ;
+  border-left:8px solid #b2071d ;
   line-height:1.0;
   position: relative;
   background:#EDEDED;
@@ -56,7 +56,7 @@ blockquote{
 blockquote::before{
   font-family:Arial;
   content: "\201C";
-  color:crimson;
+  color:#b2071d;
   font-size:4em;
   position: absolute;
   left: 10px;
