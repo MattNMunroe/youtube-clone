@@ -9,47 +9,61 @@
   }
   
   .Container {
-    width: 300px;
-    height: 300px;
-    position: fixed;
+    width: 500px;
+    height: 500px;
     border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    border: inline-block;
+    padding: 25px;
+  }
+  
+  .Container .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
   }
   
   .closeButton {
-    text-align: left;
-    padding: 0px;
-    border: none;
-    font-size: 5px;
-    cursor: pointer;
-  }
-  .closeButtonB1 {
-    border-radius: 12px;
+    display: flex;
+    justify-content: flex-end;
   }
   
-  .title {
-    width: fit-content;
-    height: 40px;
-    display: inline-block;
+  .closeButton button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .Container .body {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
     text-align: center;
-    padding: 40px 0px 75px;
-    
   }
-
-  .titleH1 {
-padding-top: -90px;
+  
+  .Container .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
-.cancelButton {
-  padding: 90px;
-  padding-top: 40px;
+.Container.footerbutton{
+width:150px;
+height:45px;
+margin:10px;
+border:none;
+background-color:cornflowerblue;
+color:white;
+border-radius:8px;
+font-size:20px;
+cursor:pointer;
 }
-.cancelButtonB1{
-  justify-content: center;
-  border-radius: 12px;
+
+#cancelBtn{
+background-color:crimson;
 }

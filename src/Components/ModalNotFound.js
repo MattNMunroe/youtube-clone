@@ -1,23 +1,24 @@
 import React from "react";
 import "./Modal.css";
-import { Link } from "react-router-dom";
+//import Router from "react-router-dom";
 
-function ModalNotFound() {
+function ModalNotFound({ closeModal }) {
   return (
     <div className="modalBackground">
       <div className="Container">
+        <button onClick={() => closeModal(false)}> X </button>
         <div className="closeButton">
-          <Link to="/">
-            <button className="closeButtonB1"> X </button>
-          </Link>
-        </div>
-        <div className="title">
-          <h1 className="titleH1"> Oh No! Bad Link. </h1>
-        </div>
-        <div className="cancelButton">
-          <Link to="/">
-            <button className="cancelButtonB1"> Cancel </button>
-          </Link>
+          <div className="title">
+            <h1> Are You Sure You Want To Continue ? </h1>
+          </div>
+          <div className="body">
+            The next page is awesome ! You should move forward , you will enjoy
+            it .
+          </div>
+          <div className="footer">
+            <button onClick={() => closeModal(false)}> Cancel </button>
+            <button> Continue </button>
+          </div>
         </div>
       </div>
     </div>

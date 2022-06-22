@@ -2,7 +2,7 @@ import React from "react";
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import "./VideoPlayer.css"
+import "./VideoPlayer.css";
 
 const VideoPlayer = () => {
   let videoId = useParams().id;
@@ -17,15 +17,15 @@ const VideoPlayer = () => {
       ...commentArray,
       { [videoId]: { name: name, comment: comment } },
     ]);
+    setName("");
+    setComment("");
   };
 
   return (
-    <div>
-      <YouTube videoId={videoId} />
+    <div className="video-wrapper">
+      <YouTube className="video" videoId={videoId} />
+      <div className="leave-comment"> </div>
       <form onSubmit={handleSubmit}>
-        <label type="text" name="name">
-          <h1>Name</h1>
-        </label>
         <input
           type="text"
           name="name"
@@ -34,10 +34,9 @@ const VideoPlayer = () => {
             setName(e.target.value);
           }}
           placeholder="Name..."
+          required
         ></input>
-        <label type="text" name="name">
-          <h1>Comment</h1>
-        </label>
+
         <input
           type="text"
           name="comment"
@@ -45,20 +44,24 @@ const VideoPlayer = () => {
           onChange={(e) => {
             setComment(e.target.value);
           }}
-          label="Comment"
-          placeholder="..."
+          placeholder="Comment..."
+          required
         ></input>
-        <button type="submit">Submit</button>
+        <br />
+        <button className="comment-button" type="submit">
+          Submit
+        </button>
       </form>
-      {console.log(commentArray)}
-      {commentArray.map((completeComment, index) => {
-        return (
-          <div key={index}>
-            <h2>{completeComment[videoId].name}</h2>
-            <p>{completeComment[videoId].comment}</p>
-          </div>
-        );
-      })}
+      <div className="comment-box">
+        {commentArray.map((completeComment, index) => {
+          return (
+            <blockquote key={index}>
+              {completeComment[videoId].comment}
+              <span>-{completeComment[videoId].name}</span>
+            </blockquote>
+          );
+        })}
+      </div>
     </div>
   );
 };

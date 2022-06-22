@@ -6,12 +6,14 @@ import VideoCards from "./Components/VideoCards";
 import VideoPlayer from "./Components/VideoPlayer";
 import About from "./About";
 import ModalNotFound from "./Components/ModalNotFound";
+import SearchHistory from "./Components/SearchHistory";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       isPlaying: [],
+      searchHistory: []
     };
   }
 
@@ -20,7 +22,7 @@ class App extends React.Component {
       `https://youtube.googleapis.com/youtube/v3/search?maxResults=20&type=video&q=${search}&key=${process.env.REACT_APP_API_KEY}&part=snippet`
     )
       .then((res) => res.json())
-      .then((data) => this.setState({ isPlaying: data.items }))
+      .then((data) => this.setState({ isPlaying: data.items, searchHistory: [...this.state.searchHistory, search] }))
       .catch((e) => {
         console.log(e);
       });
@@ -28,7 +30,8 @@ class App extends React.Component {
 
   render() {
     console.log(this.state.isPlaying);
-
+    console.log(this.state.searchHistory)
+    
     return (
       <div className="App">
         <NavBar />
@@ -37,6 +40,7 @@ class App extends React.Component {
             path="/"
             element={
               <>
+              <SearchHistory searchHistory={this.state.searchHistory}/>
                 <Search handleSearch={this.handleSearch} />
                 <VideoCards thisIsPlaying={this.state.isPlaying} />
               </>
