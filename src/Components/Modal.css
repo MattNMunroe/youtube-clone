@@ -32,7 +32,7 @@
   border-radius: 12px;
 }
 
-.title {
+.title-modal {
   width: fit-content;
   height: 40px;
   display: inline-block;
@@ -42,7 +42,7 @@
 }
 
 .titleH1 {
-padding-top: -90px;
+padding-top: 75px;
 }
 
 .cancelButton {
